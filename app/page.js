@@ -9,7 +9,7 @@ import UseCases from './components/UseCases';
 import Footer from './components/Footer';
 const page = () => {
   return (
-    <div className='max-w-[1670px] mx-auto w-full'>
+    <div className='max-w-[1670px] mx-auto w-full overflow-x-hidden'>
     <Navbar />
     <HeroSection1 />
     <Features />
