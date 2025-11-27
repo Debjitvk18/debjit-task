@@ -12,9 +12,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-   --font-primary: 'Montserrat', sans-serif;   /* PRIMARY FONT */
-  --font-krona: 'Krona One', sans-serif;      /* TITLE FONT */        
-  --color-primary: #1155CC
+   --font-primary: 'Montserrat', sans-serif;   
+  --font-krona: 'Krona One', sans-serif;            
+  --color-primary: #1155CC;
+  --color-secondary:#3f3f3f;
 }
  
 @media (prefers-color-scheme: light) {
@@ -29,3 +30,13 @@ body {
   color: var(--foreground);
 }
  
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

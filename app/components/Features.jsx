@@ -25,46 +25,60 @@ const features = [
 
 const Features = () => {
   return (
-<div className="w-full flex flex-col items-center py-24">
+   
+    <section className="w-full flex flex-col items-center py-16 sm:py-24 bg-white"> 
+      <div className="w-full max-w-7xl px-4 sm:px-8 md:px-12 relative">
 
-  <div className="relative w-full px-32">
+        <div 
+          className="
+            hidden lg:block 
+            absolute 
+            top-[48px] 
+            z-0 
+            left-40 right-[11%]
+            border-t-2 border-dashed border-primary/20 
+          " 
+        />
+        <div className="
+          grid 
+          grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          gap-10 lg:gap-6
+          relative z-10
+        ">
+          {features.map((item, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center text-center space-y-4"
+            >
+              <div
+                className="
+                  w-24 h-24
+                  bg-white 
+                  rounded-full
+                  flex items-center justify-center
+                  border border-primary/20
+                  relative z-10 // 3. IMPORTANT FIX: High Z-index to sit on top of the line
+                "
+              >
+               
+                <div className="w-full h-full rounded-full bg-primary/5 flex items-center justify-center">
+                    <Image src={item.icon} alt={item.title} width={40} height={40} />
+                </div>
+              </div>
 
-    <div className="absolute top-[50px] h-0 left-[calc(18.5%+50px)] right-[calc(18.5%+50px)] 
-      border-t-[3px] border-dashed border-primary opacity-10">
-    </div>
+              <h3 className="text-primary font-primary font-bold text-lg">
+                {item.title}
+              </h3>
 
-    <div className="flex justify-between">
-      {features.map((item, i) => (
-        <div
-          key={i}
-          className="flex flex-col items-center text-center w-1/4 px-6 relative z-10"
-        >
-          <div
-            className="
-              w-[100px] h-[100px]
-              bg-[rgba(18,21,24,0.05)]
-              rounded-full
-              flex items-center justify-center
-              border border-primary/30
-            "
-          >
-            <Image src={item.icon} alt={item.title} width={40} height={40} />
-          </div>
-
-          <h3 className="text-primary font-bold text-[20px] mt-4 font-primary">
-            {item.title}
-          </h3>
-
-          <p className="text-dark text-[14px] leading-[26px] font-primary mt-2">
-            {item.desc}
-          </p>
+              <p className="text-dark text-sm font-primary leading-relaxed max-w-[230px]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
-  </div>
-</div>
-
+      </div>
+    </section>
   );
 };
 

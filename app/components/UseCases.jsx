@@ -1,45 +1,46 @@
-import React from "react";
 import Card from "./Card";
+import SliderClient from "./SliderClient";
 
-const UseCases = () => {
+const slides = [
+  {
+    icon: "/image1.png",
+    title: "Freelancers",
+    desc: "Centralized meeting directory where you can search",
+  },
+  {
+    icon: "/image.png",
+    title: "Financial Services",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    icon: "/image2.png",
+    title: "Software Development",
+    desc: "Centralized meeting directory where you can search",
+  },
+];
+
+export default function UseCases() {
   return (
-    <div className="relative py-24 w-full flex flex-col items-center overflow-hidden">
-      
-      {/* Heading */}
-      <h1 className="font-primary text-primary font-bold text-[50px] text-center">
+    <section className="w-full py-16 sm:py-24 flex flex-col justify-center items-center overflow-hidden px-4">
+      <h1 className="font-primary text-primary font-bold text-3xl sm:text-4xl md:text-5xl text-center">
         Use Cases
       </h1>
-
-      {/* Cards */}
-      <div className="flex justify-center gap-10 mt-16">
-        <Card
-          icon="/image1.png"
-          title="Freelancers"
-          desc="Centralized meeting directory where you can search"
-        />
-
-        <Card
-          icon="/image.png"
-          title="Financial Services"
-          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        />
-
-        <Card
-          icon="/image2.png"
-          title="Software Development"
-          desc="Centralized meeting directory where you can search"
-        />
+      <div className="flex md:hidden w-full justify-center mt-12">
+        <SliderClient slides={slides} />
       </div>
-
-      {/* Dots Indicator */}
-      <div className="flex gap-3 mt-10">
-        <div className="w-3 h-3 bg-primary rounded-full"></div>
-        <div className="w-3 h-3 bg-[#E2E8F0] rounded-full"></div>
-        <div className="w-3 h-3 bg-[#E2E8F0] rounded-full"></div>
+      <div
+        className="
+          hidden md:flex
+          gap-10 lg:gap-20
+          mt-12 sm:mt-16
+          items-center
+          w-full justify-center
+        "
+      >
+        {slides.map((item, i) => (
+          <Card key={i} icon={item.icon} title={item.title} desc={item.desc} />
+        ))}
       </div>
-
-    </div>
+    </section>
   );
-};
-
-export default UseCases;
+}

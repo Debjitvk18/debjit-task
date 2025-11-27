@@ -9,7 +9,7 @@ import UseCases from './components/UseCases';
 import Footer from './components/Footer';
 const page = () => {
   return (
-    <>
+    <div className='max-w-[1670px] mx-auto w-full'>
     <Navbar />
     <HeroSection1 />
     <Features />
@@ -17,7 +17,7 @@ const page = () => {
     <PiggyBank />
     <UseCases />  
     <Footer />
-    </>
+    </div>
    
   )
 }
