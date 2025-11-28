@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white pt-14 sm:pt-16 pb-10 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <footer className="w-full bg-white pt-14 sm:pt-16 pb-10 border-t  border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6  max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center">
 
 
         <div
@@ -17,7 +17,7 @@ const Footer = () => {
           "
         >
          
-          <div className="flex flex-col sm:flex-row   gap-12 sm:gap-20">
+          <div className="flex flex-col sm:flex-row   gap-12 sm:gap-20 ">
 
         
             <div>

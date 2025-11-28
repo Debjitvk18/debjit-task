@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Card = ({ icon, title, desc }) => {
+const Card = ({ icon, title, desc,iconsize }) => {
   return (
     <div
       className="
@@ -8,23 +8,32 @@ const Card = ({ icon, title, desc }) => {
         max-w-[380px]
         bg-white
         rounded-2xl
-        shadow-[10px_40px_50px_rgba(229,233,246,0.4)]
+        shadow-lg
         p-6 sm:p-8
         flex
         flex-col
         items-center
         text-center
+        
       "
     >
-      <Image
-        src={icon}
-        alt={title}
-        width={80}
-        height={80}
-        className="mb-4 sm:mb-6"
-      />
 
-      <h2 className="text-primary font-primary font-semibold text-lg sm:text-xl mb-2">
+      
+      <div className="relative  w-20 h-20 mb-4 sm:mb-6"
+          style={{
+          width: iconsize,
+          height:iconsize,
+          
+        }}>
+        <Image
+          src={icon}
+          alt={title}
+          fill
+          className="object-contain rounded-md "
+        />
+      </div>
+
+      <h2 className="text-primary font-primary font-semibold text-lg sm:text-xl mb-2 text-balance">
         {title}
       </h2>
 

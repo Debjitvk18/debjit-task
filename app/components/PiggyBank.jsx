@@ -3,41 +3,53 @@ import Image from "next/image";
 
 const PiggyBank = () => {
   return (
-    <section className="w-full py-16 sm:py-24 flex justify-center px-4 sm:px-8">
-      <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
-        <div className="hidden lg:block relative w-[450px] h-[500px] ">
+    <section className="w-full py-16 sm:py-24 flex justify-center px-10 ml-20 max-sm:ml-0 sm:px-8 md:flex-col">
+      <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-start  ">
+        
+      
+        <div className="relative -translate-x-50 md:flex md:flex-col md:justify-center md:items-center w-full[300px] sm:w-[380px]  lg:w-[500px] h-[380px] sm:h-[450px] md:w-5/6 flex-shrink-0 order-1 lg:order-none hidden max-lg:-translate-x-90 ">
+
           <Image
             src="/othermango.png"
             alt="Background"
-            width={700}
-            height={660}
-            className="relative w-full h-full -translate-x-50 "
+            fill
+            className="object-contain -transalate-x-10 h-100 w-100"
+            
           />
-          <div className="absolute top-14 left-20 -translate-x-50 ">
-            <h2 className="font-primary text-primary text-4xl leading-tight ">
+
+      
+          <div className="absolute top-10 sm:top-14 left-10 sm:left-20 translate-x-10 max-lg:translate-x-30 ">
+            <h2 className="font-primary text-primary text-3xl sm:text-4xl leading-tight ">
               Start your
             </h2>
 
             <div className="flex gap-2 mt-1">
-              <h2 className="font-primary text-primary font-bold text-4xl leading-tight">
+              <h2 className="font-primary text-primary font-bold text-3xl sm:text-4xl leading-tight">
                 free plan
               </h2>
 
-              <h2 className="font-primary text-primary text-4xl leading-tight">
+              <h2 className="font-primary text-primary text-3xl sm:text-4xl leading-tight">
                 now
               </h2>
             </div>
           </div>
-          <Image
-            src="/pig.png"
-            alt="Pig"
-            width={260}
-            height={260}
-            className="absolute bottom-0 left-16 -translate-x-50 "
-          />
+
+
+          <div className="absolute bottom-10 left-10 sm:left-16 translate-x-16 hidden md:block max-lg:translate-x-40">
+            <Image
+              src="/pig.png"
+              alt="Pig"
+              width={190}
+              height={150}
+              className="object-contain"
+            />
+          </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-10 lg:-translate-x-50 ">
-       
+
+   
+        <div className="flex flex-col sm:flex-row gap-10 order-2 lg:order-none md:flex-col lg:flex-row max-lg:-translate-y-140 max-sm:translate-y-0">
+          
+          
           <div className="w-full sm:w-[320px] bg-primary text-white rounded-2xl p-8 shadow-lg font-primary">
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">PRO</h3>
 
@@ -56,6 +68,8 @@ const PiggyBank = () => {
               Start Now
             </button>
           </div>
+
+       
           <div className="w-full sm:w-[320px] bg-white rounded-2xl p-8 shadow-xl font-primary">
             <h3 className="text-primary text-xl sm:text-2xl font-semibold">
               Free
@@ -78,7 +92,6 @@ const PiggyBank = () => {
           </div>
 
         </div>
-
       </div>
     </section>
   );

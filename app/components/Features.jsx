@@ -48,7 +48,7 @@ const Features = () => {
           {features.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center space-y-4"
+              className="flex flex-col items-center text-center space-y-5"
             >
               <div
                 className="
@@ -57,7 +57,7 @@ const Features = () => {
                   rounded-full
                   flex items-center justify-center
                   border border-primary/20
-                  relative z-10 // 3. IMPORTANT FIX: High Z-index to sit on top of the line
+                  relative z-10
                 "
               >
                
@@ -69,10 +69,12 @@ const Features = () => {
               <h3 className="text-primary font-primary font-bold text-lg">
                 {item.title}
               </h3>
-
-              <p className="text-dark text-sm font-primary leading-relaxed max-w-[230px]">
+             <div className=" text-balance">
+                <p className="text-dark text-[14px] font-primary  max-w-[230px]">
                 {item.desc}
               </p>
+             </div>
+              
             </div>
           ))}
         </div>

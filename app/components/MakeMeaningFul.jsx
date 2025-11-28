@@ -31,6 +31,9 @@ const MakeMeaningFul = () => {
           z-10
           md:gap-10
           px-4
+          text-wrap
+          laeding-[26px]
+          text-[14px]
         "
       >
         <Card
@@ -62,12 +65,10 @@ const MakeMeaningFul = () => {
         alt="dots"
         className="
           absolute
-          left-2 sm:left-6 md:left-12
-          bottom-4 sm:bottom-8
+          sm:left-6 md:left-12
+           sm:bottom-8
           w-20 sm:w-28
-          opacity-40
-          pointer-events-none
-          z-0
+          mb-35 ml-20  
         "
       />
       <button
