@@ -16,9 +16,9 @@ const MakeMeaningFul = () => {
           pointer-events-none
         "
       />
-      <h1 className="font-primary text-primary font-bold text-3xl sm:text-4xl md:text-5xl text-center relative z-10">
+      <h2 className="font-primary text-primary font-bold text-3xl sm:text-4xl md:text-5xl text-center relative z-10">
         Make Meetings Meaningful
-      </h1>
+      </h2>
 
      
       <div

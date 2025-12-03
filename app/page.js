@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const metadata = {
   title: {
     default: "Noda – Improve Collaboration",
@@ -23,10 +21,10 @@ export const metadata = {
   creator: "Noda",
   publisher: "Noda",
  
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://figma-to-nextjs-eosin.vercel.app/"),
  
   alternates: {
-    canonical: "https://yourdomain.com",
+    canonical: "https://figma-to-nextjs-eosin.vercel.app/",
   },
  
   robots: {
@@ -42,36 +40,37 @@ export const metadata = {
   },
  
   openGraph: {
-    title: "Noda – AI-Powered Collaboration",
+    title: "Noda - AI-Powered Collaboration",
     description:
       "Transform your meetings with Noda — an intelligent assistant that records, summarizes, and organizes your team's workflow.",
-    url: "https://yourdomain.com",
+    url: "https://figma-to-nextjs-eosin.vercel.app/",
     siteName: "Noda",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Noda – AI Collaboration Platform",
+        url: "/heroimage.png",
+        width: 200,
+        height: 200,
+        alt: "Noda - AI Collaboration Platform",
       },
     ],
     locale: "en_US",
     type: "website",
   },
  
+  // --------------------------------------------------------
+  // TWITTER META TAGS — Twitter does NOT fully use OpenGraph
+  // --------------------------------------------------------
   twitter: {
     card: "summary_large_image",
     title: "Noda – AI-Powered Collaboration",
     description:
       "Noda helps teams run smarter meetings with AI summaries, action points, and workflow management.",
-    images: ["/og-image.png"],
+    images: ["/heroimage.png"],
     creator: "@noda",
   },
  
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
+    apple: "/apple.png",
   },
  
   themeColor: "#eff3f9",
@@ -84,7 +83,8 @@ export const metadata = {
   applicationName: "Noda AI",
 };
  
-
+ 
+import React from 'react'
 import Navbar from './components/Navbar';
 import HeroSection1 from './components/Herosection1';
 import Features from './components/Features';

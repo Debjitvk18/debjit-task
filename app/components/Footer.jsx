@@ -17,21 +17,21 @@ const Footer = () => {
           "
         >
          
-          <div className="flex flex-col sm:flex-row   gap-12 sm:gap-20 ">
+          <div className="flex flex-col sm:flex-row max-lg:ml-35 gap-12 sm:gap-20 ">
 
         
             <div>
               <h3 className="text-primary font-bold text-lg sm:text-xl mb-4 font-primary">
                 Our Company
               </h3>
-              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base">
-                <li>About us</li>
-                <li>Join Meeting</li>
-                <li>Our Services</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-                <li>Let’s Talk</li>
-                <li>Blog</li>
+              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base flex flex-col">
+                <a href="#">About us</a>
+                <a href="#">Join Meeting</a>
+                <a href="#">Our Services</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Let’s Talk</a>
+                <a href="#">Blog</a>
               </ul>
             </div>
 
@@ -69,17 +69,14 @@ const Footer = () => {
           </div>
 
          
-          <div className="flex flex-col items-center lg:items-end w-full lg:w-auto">
-            <h1 className="text-primary font-krona font-bold text-3xl sm:text-4xl mb-6">
+          <div className="flex flex-col items-center  w-full lg:w-auto">
+            <h2 className="text-primary font-krona font-bold text-3xl sm:text-4xl mb-6 ">
               Noda
-            </h1>
+            </h2>
 
             <div className="flex gap-4">
-              <Image src="/ig.png" alt="Instagram" width={40} height={40} className="p-2 rounded-full bg-gray-100" />
-              <Image src="/fb.png" alt="Facebook" width={40} height={40} className="p-2 rounded-full bg-gray-100" />
-              <Image src="/tw.png" alt="Twitter" width={40} height={40} className="p-2 rounded-full bg-gray-100" />
-              <Image src="/link.png" alt="LinkedIn" width={40} height={40} className="p-2 rounded-full bg-gray-100" />
-              <Image src="/yt.png" alt="YouTube" width={40} height={40} className="p-2 rounded-full bg-gray-100" />
+              <Image src="/sociall.png" alt="Instagram" width={400} height={400} className="p-2 cursor-pointer " />
+             
             </div>
           </div>
         </div>
