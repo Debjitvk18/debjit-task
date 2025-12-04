@@ -10,12 +10,15 @@ const Navbar = () => {
   const handleSignup = () => {
     router.push("/signup");
   };
+   const handleSlash = () => {
+    router.push("/");
+  };
 
   return (
-    <nav className="w-full flex items-center justify-between px-4 sm:px-8 md:px-12 py-4">
-      <h1 className="text-primary font-krona text-2xl sm:text-3xl font-bold">
+    <nav className="w-full flex items-center justify-between sm:px-8 md:px-12 py-4">
+      <button className="text-primary font-krona text-2xl sm:text-3xl font-bold cursor-pointer" onClick={handleSlash}>
         Noda
-      </h1>
+      </button>
       <div className="flex items-center gap-3 sm:gap-4">
         <button
           className="
@@ -27,6 +30,7 @@ const Navbar = () => {
             font-semibold
             hover:bg-primary hover:text-white
             transition-all
+            cursor-pointer
           "
          onClick={handleSignin}
         >
@@ -42,6 +46,7 @@ const Navbar = () => {
             font-primary font-semibold
             transition-all
             hover:bg-white hover:text-primary border border-primary
+            cursor-pointer
           "
             onClick={handleSignup}
         >

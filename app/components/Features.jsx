@@ -27,7 +27,7 @@ const Features = () => {
   return (
    
     <section className="w-full flex flex-col items-center py-16 sm:py-24 bg-white"> 
-      <div className="w-full max-w-7xl px-4 sm:px-8 md:px-12 relative">
+      <div className="w-full   relative">
 
         <div 
           className="

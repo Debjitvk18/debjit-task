@@ -4,6 +4,24 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
+const scrollToCard = (container, index) => {
+  if (!container || !container.children.length) return;
+
+  const card = container.children[index];
+  const cardLeft = card.offsetLeft;
+  const containerWidth = container.offsetWidth;
+  const cardWidth = card.offsetWidth;
+
+
+  const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+  container.scrollTo({
+    left: scrollPosition,
+    behavior: "smooth",
+  });
+};
+
 export default function UseCase() {
   const data = [
     { title: "Freelancers", desc: "Centralized meeting directory", img: "/working.jpg" },
@@ -11,23 +29,19 @@ export default function UseCase() {
     { title: "Software Development", desc: "Centralized meeting directory", img: "/working.jpg" },
   ];
 
-  const [active, setActive] = useState(1); 
+  const [active, setActive] = useState(1);
   const scrollRef = useRef(null);
 
 
   useEffect(() => {
     if (scrollRef.current) {
-      const cardWidth = scrollRef.current.children[0].offsetWidth;
-      scrollRef.current.scrollTo({
-        left: active * (cardWidth + 16),
-        behavior: "smooth",
-      });
+      scrollToCard(scrollRef.current, active);
     }
   }, [active]);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 md:-mt-130 lg:mt-0">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 w-full sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 md:-mt-130 lg:mt-0">
+      <div className="max-w-[1670px]">
         <h2
           className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-(--color-primary)"
           style={{ fontFamily: "var(--font-primary)" }}
@@ -35,7 +49,7 @@ export default function UseCase() {
           Use Cases
         </h2>
 
-       
+        
         <div
           ref={scrollRef}
           className="
@@ -78,7 +92,7 @@ export default function UseCase() {
           })}
         </div>
 
-        
+  
         <div className="hidden lg:flex justify-center items-center gap-10 mt-14">
           {data.map((item, index) => {
             const isActive = index === active;
@@ -87,11 +101,11 @@ export default function UseCase() {
               <motion.div
                 key={index}
                 animate={{
-                  scale: isActive ? 1.1 : 1,
+                  scale: isActive ? 1 : 0.85,
                   opacity: isActive ? 1 : 0.8,
                 }}
                 transition={{ duration: 0.35 }}
-                className="w-72 cursor-pointer"
+                className="w-150 max-sm:h-80 cursor-pointer"
                 onClick={() => setActive(index)}
               >
                 <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-200">
@@ -100,11 +114,11 @@ export default function UseCase() {
                     <div className="absolute inset-0 bg-[#0000004D]"></div>
                   </div>
 
-                  <h3 className="mt-6 text-xl font-bold text-(--color-primary)">
+                  <h3 className="mt-6 text-xl font-bold text-(--color-primary) font-primary">
                     {item.title}
                   </h3>
 
-                  <p className="text-(--color-secondary) mt-2 text-base leading-relaxed">
+                  <p className="text-(--color-secondary) mt-2 text-base leading-relaxed font-primary">
                     {item.desc}
                   </p>
                 </div>
@@ -113,7 +127,7 @@ export default function UseCase() {
           })}
         </div>
 
-        
+ 
         <div className="flex justify-center mt-8 gap-2 sm:gap-3">
           {data.map((_, idx) => (
             <motion.div

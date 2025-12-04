@@ -40,14 +40,14 @@ const Footer = () => {
               <h3 className="text-primary font-bold text-lg sm:text-xl mb-4 font-primary">
                 Lorem Ipsum
               </h3>
-              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base">
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
+              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base flex flex-col">
+                <a href="#">About us</a>
+                <a href="#">Join Meeting</a>
+                <a href="#">Our Services</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Let’s Talk</a>
+                <a href="#">Blog</a>
               </ul>
             </div>
 
@@ -56,23 +56,23 @@ const Footer = () => {
               <h3 className="text-primary font-bold text-lg sm:text-xl mb-4 font-primary">
                 Lorem Ipsum
               </h3>
-              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base">
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
+              <ul className="space-y-2 text-gray-600 font-primary text-sm sm:text-base flex flex-col">
+                <a href="/">About us</a>
+                <a href="/">Join Meeting</a>
+                <a href="/">Our Services</a>
+                <a href="/">Careers</a>
+                <a href="/">Contact Us</a>
+                <a href="/">Let’s Talk</a>
+                <a href="/">Blog</a>  
               </ul>
             </div>
           </div>
 
          
           <div className="flex flex-col items-center  w-full lg:w-auto">
-            <h2 className="text-primary font-krona font-bold text-3xl sm:text-4xl mb-6 ">
+            <a href="/" className="text-primary font-krona font-bold text-3xl sm:text-4xl mb-6 ">
               Noda
-            </h2>
+            </a>
 
             <div className="flex gap-4">
               <Image src="/sociall.png" alt="Instagram" width={400} height={400} className="p-2 cursor-pointer " />

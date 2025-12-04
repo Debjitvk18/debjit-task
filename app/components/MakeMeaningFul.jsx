@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-
+import Link from "next/link";
 const MakeMeaningFul = () => {
   return (
     <section className="relative w-full py-16 sm:py-24 flex flex-col items-center overflow-hidden">
@@ -30,7 +30,7 @@ const MakeMeaningFul = () => {
           relative
           z-10
           md:gap-10
-          px-4
+          
           text-wrap
           laeding-[26px]
           text-[14px]
@@ -71,7 +71,8 @@ const MakeMeaningFul = () => {
           mb-35 ml-20  
         "
       />
-      <button
+      <Link href="/signup">
+         <button
         className="
           mt-12 sm:mt-14
           bg-primary
@@ -89,6 +90,8 @@ const MakeMeaningFul = () => {
       >
         Sign Up
       </button>
+      </Link>
+     
     </section>
   );
 };

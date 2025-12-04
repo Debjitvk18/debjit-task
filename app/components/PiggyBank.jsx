@@ -10,11 +10,12 @@ const PiggyBank = () => {
         <div className="relative -translate-x-50 md:flex md:flex-col md:justify-center md:items-center w-full[300px] sm:w-[380px]  lg:w-[500px] h-[380px] sm:h-[450px] md:w-5/6 flex-shrink-0 order-1 lg:order-none hidden max-lg:-translate-x-90 ">
 
           <Image
-            src="/othermango.png"
+            src="/piiiiig.png"
             alt="Background"
-            fill
-            className="object-contain -transalate-x-10 h-100 w-100"
             
+            className=" -transalate-x-10 "
+            width={507}
+            height={588}
           />
 
       
@@ -35,15 +36,7 @@ const PiggyBank = () => {
           </div>
 
 
-          <div className="absolute bottom-10 left-10 sm:left-16 translate-x-16 hidden md:block max-lg:translate-x-40">
-            <Image
-              src="/pig.png"
-              alt="Pig"
-              width={190}
-              height={150}
-              className="object-contain"
-            />
-          </div>
+          
         </div>
 
    

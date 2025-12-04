@@ -94,15 +94,25 @@ import UseCases from './components/UseCases';
 import Footer from './components/Footer';
 const page = () => {
   return (
-    <div className='max-w-[1670px] mx-auto w-full overflow-x-hidden'>
-    <Navbar />
-    <HeroSection1 />
+    <>
+    <div className='sm:max-w-[1670px] sm:mx-auto sm:w-full sm:overflow-x-hidden sm:px-10 lg:px-20 max-sm:mx-10'>
+        <Navbar />
+    </div>
+    
+ 
+     <div className='max-w-[1670px] sm:mx-auto w-full overflow-x-hidden lg:px-20 md:px-10 '>
+      <div className='max-sm:px-10'>
+          <HeroSection1 />
+      </div>
+    
     <Features />
     <MakeMeaningFul />
     <PiggyBank />
     <UseCases />  
     <Footer />
     </div>
+   
+    </>
    
   )
 }

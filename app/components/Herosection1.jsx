@@ -1,21 +1,23 @@
+
 import Image from "next/image";
 
+import React from "react";
+import Link from "next/link";
 const HeroSection1 = () => {
+
   return (
     <section className="w-full">
       <div
         className="
         flex flex-col-reverse md:flex-row
         items-center justify-between
-        px-4 sm:px-8 md:px-12 lg:px-16
+        sm:px-8 md:px-12 
         py-10 sm:py-14 md:py-20
         gap-10
       "
       >
         
         <div className="w-full md:w-1/2">
-
-          
           <div className="space-y-6">
 
             
@@ -51,8 +53,10 @@ const HeroSection1 = () => {
             </div>
           </div>
 
+         <Link href="/signup">
          
           <button
+
             className="
             mt-6
             px-6 sm:px-8 py-3
@@ -60,10 +64,14 @@ const HeroSection1 = () => {
             text-lg rounded-lg
             font-primary font-semibold
             hover:opacity-90 transition
+            cursor-pointer
           "
+        
           >
             Sign Up
           </button>
+          </Link>
+         
         </div>
 
         
